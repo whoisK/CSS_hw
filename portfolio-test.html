@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio-test</title>
+    <style>
+        .container3 {
+            width: 80%;
+            max-width: 1200px;
+            height: 600px;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            gap: 15px;
+            margin: auto;
+        }
+
+        .item {
+            height: 200px;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .item img {
+            max-width: 100%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .item:nth-child(1) {
+            grid-area: 1/1/3/2;
+            height: 100%;
+        }
+
+        .item:nth-child(2) {
+            grid-area: 1/2/2/4;
+        }
+
+        .item:nth-child(7) {
+            grid-area: 2/4/4/6;
+            height: 100%;
+        }
+
+        /* flip-card */
+        .flip {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.5s;
+        }
+
+        .flip:hover {
+            transform: rotateY(180deg);
+        }
+
+        .img-front-1,
+        .img-back-1 {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgb(98, 195, 255);
+            backface-visibility: hidden;
+        }
+
+        .img-back-1 {
+            transform: rotateY(180deg);
+            text-align: center;
+            line-height: 200px;
+        }
+
+        .big-pic {
+            line-height: 415px;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="Portfolio">
+        <div class="container3">
+            <div class="item">
+                <div class="flip">
+                    <div class="img-front-1"><img src="imgs/strawberry.jpg" alt=""></div>
+                    <div class="img-back-1  big-pic">photo</div>
+                </div>
+            </div>
+
+
+
+            <div class="item"><img src="imgs/flowers1.jpg" alt=""></div>
+            <div class="item"><img src="imgs/food1.jpg" alt=""></div>
+
+            <div class="item">
+                <div class="flip">
+                    <div class="img-front-1"><img src="imgs/food2.jpg" alt=""></div>
+                    <div class="img-back-1">photo</div>
+                </div>
+            </div>
+
+
+            <div class="item">
+                <div class="flip">
+                    <div class="img-front-1"><img src="imgs/japan.jpg" alt=""></div>
+                    <div class="img-back-1">photo</div>
+                </div>
+            </div>
+
+            <div class="item"><img src="imgs/japan1.jpg" alt=""></div>
+
+            <div class="item">
+                <div class="flip">
+                    <div class="img-front-1"><img src="imgs/japan2.jpg" alt=""></div>
+                    <div class="img-back-1  big-pic">photo</div>
+                </div>
+            </div>
+
+
+            <div class="item"><img src="imgs/japan3.jpg" alt=""></div>
+            <div class="item"><img src="imgs/people1.jpg" alt=""></div>
+
+            <div class="item">
+                <div class="flip">
+                    <div class="img-front-1"><img src="imgs/people2.jpg" alt=""></div>
+                    <div class="img-back-1">photo</div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
